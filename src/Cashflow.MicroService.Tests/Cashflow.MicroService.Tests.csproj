@@ -1,0 +1,37 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net5.0</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="domain\**" />
+    <Compile Remove="services\**" />
+    <EmbeddedResource Remove="domain\**" />
+    <EmbeddedResource Remove="services\**" />
+    <None Remove="domain\**" />
+    <None Remove="services\**" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Cashflow.Domain.Model\Cashflow.Domain.Model.csproj" />
+    <ProjectReference Include="..\Cashflow.Services.Implementations\Cashflow.Services.Implementations.csproj" />
+    <ProjectReference Include="..\Cashflow.Services.Contracts\Cashflow.Services.Contracts.csproj" />
+    <ProjectReference Include="..\Cashflow.Infra.Implementations\Cashflow.Infra.Implementations.csproj" />
+    <ProjectReference Include="..\Cashflow.Domain.Implementations\Cashflow.Domain.Implementations.csproj" />
+    <ProjectReference Include="..\Cashflow.Crosscutting\Cashflow.Crosscutting.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.EntityFrameworkCore.InMemory" Version="5.0.7" />
+    <PackageReference Include="Microsoft.NET.Test.Sdk" Version="16.10.0" />
+    <PackageReference Include="xunit.runner.visualstudio" Version="2.4.3">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers</IncludeAssets>
+    </PackageReference>
+    <PackageReference Include="Microsoft.Extensions.Testing.Abstractions" Version="1.0.0-preview2-003121" />
+    <PackageReference Include="Moq" Version="4.16.1" />
+    <PackageReference Include="xunit" Version="2.4.1" />
+  </ItemGroup>
+
+</Project>

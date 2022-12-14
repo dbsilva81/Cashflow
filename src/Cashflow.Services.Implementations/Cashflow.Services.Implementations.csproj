@@ -1,0 +1,15 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net5.0</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Cashflow.Crosscutting\Cashflow.Crosscutting.csproj" />
+    <ProjectReference Include="..\Cashflow.Domain.Contracts\Cashflow.Domain.Contracts.csproj" />
+    <ProjectReference Include="..\Cashflow.Services.Contracts\Cashflow.Services.Contracts.csproj" />
+    <ProjectReference Include="..\Cashflow.Domain.Model\Cashflow.Domain.Model.csproj" />
+    <ProjectReference Include="..\Cashflow.Domain.Implementations\Cashflow.Domain.Implementations.csproj" />
+  </ItemGroup>
+
+</Project>
